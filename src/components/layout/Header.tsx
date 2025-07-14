@@ -11,10 +11,10 @@ export default function Header() {
 
   return (
     <header className="flex items-center justify-between border-b border-[#1E2D3D]">
-      <div className="flex items-center justify-between w-full h-12 pl-6">
+      <div className="flex items-center justify-between w-full h-12">
         <div className="flex items-center h-full">
-          <div className="md:border-r h-full flex items-center">
-            <Link href="/" className="text-white pr-14 text-lg font-medium ">
+          <div className="md:border-r h-full flex items-center w-[300px] pl-6">
+            <Link href="/" className="text-white text-lg font-medium ">
               akbar-farajov
             </Link>
           </div>

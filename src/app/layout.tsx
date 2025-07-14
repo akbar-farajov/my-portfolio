@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${notoSerif.variable} antialiased flex flex-col`}>
-        <div className="flex flex-col min-h-screen font-noto-serif">
+        <div className="min-h-screen font-noto-serif flex flex-col">
           <Header />
           {children}
           <Footer />

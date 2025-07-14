@@ -1,20 +1,20 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { RiLinkedinFill, RiTwitterXFill, RiGithubFill } from "@remixicon/react";
 import Link from "next/link";
 
 const socialLinks = [
   {
     name: "LinkedIn",
-    icon: <Linkedin size={20} />,
+    icon: <RiLinkedinFill size={20} />,
     url: "https://www.linkedin.com/in/akbar-farajov",
   },
   {
     name: "Twitter",
-    icon: <Twitter size={20} />,
+    icon: <RiTwitterXFill size={20} />,
     url: "https://twitter.com/akbarfarajov",
   },
   {
     name: "Github",
-    icon: <Github size={20} />,
+    icon: <RiGithubFill size={20} />,
     url: "https://github.com/akbar-farajov",
   },
 ];
