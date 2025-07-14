@@ -22,8 +22,8 @@ export function HeroSection() {
       </div>
 
       <div className="text-[#607B96] text-sm flex flex-col gap-2">
-        <span>// create more projects to continue</span>
-        <span>// you can also find my profile on Github:</span>
+        <span>{"// create more projects to continue"}</span>
+        <span>{"// you can also find my profile on Github:"}</span>
         <p>
           <span className="text-[#4D5BCE]">const</span>{" "}
           <span className="text-[#43D9AD]">githubLink</span> ={" "}
@@ -33,7 +33,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="text-[#E99287] underline hover:text-white transition-colors"
           >
-            "https://github.com/akbar-farajov"
+            &quot;https://github.com/akbar-farajov&quot;
           </a>
         </p>
       </div>
