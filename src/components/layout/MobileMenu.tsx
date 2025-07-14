@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Sheet,
-  SheetDescription,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "../ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import { navLinks } from "@/data";

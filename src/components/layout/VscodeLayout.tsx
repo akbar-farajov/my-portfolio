@@ -8,7 +8,7 @@ import { DataFolder } from "@/data/about-data";
 export interface File {
   name: string;
   type: "file" | "folder";
-  content?: any;
+  content?: unknown;
   icon?: string;
 }
 

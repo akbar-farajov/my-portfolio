@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 interface FileType {
   name: string;
   type: "file" | "folder";
-  content?: any;
+  content?: unknown;
   icon?: string;
 }
 

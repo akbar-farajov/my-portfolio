@@ -1,21 +1,15 @@
 import {
-  FileJson2,
   Code,
   Award,
   User,
   Briefcase,
   Rocket,
   Heart,
-  FlagOff,
   FolderCode,
   Database,
   BriefcaseBusiness,
 } from "lucide-react";
-import {
-  RiFolderInfoFill,
-  RiFolderUserFill,
-  RiUserLine,
-} from "@remixicon/react";
+import { RiFolderUserFill } from "@remixicon/react";
 
 // ===== TYPE DEFINITIONS =====
 export interface PersonalInfo {
@@ -78,7 +72,7 @@ export interface Education {
 export interface DataFile {
   name: string;
   type: "file";
-  content: any;
+  content: unknown;
   icon: React.ReactNode;
   lastModified?: string;
 }
@@ -368,7 +362,7 @@ export const getFolderByName = (name: string): DataFolder | null => {
 export interface LegacyFile {
   name: string;
   type: "file" | "folder";
-  content?: any;
+  content?: unknown;
   icon?: string;
 }
 

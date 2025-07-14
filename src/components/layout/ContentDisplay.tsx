@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface ContentDisplayProps {
-  content: any;
+  content: unknown;
 }
 
 export default function ContentDisplay({ content }: ContentDisplayProps) {
