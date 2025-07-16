@@ -22,14 +22,21 @@ export default function TabsBar({
   onTabClose,
 }: TabsBarProps) {
   return (
-    <div className="flex border-b border-[#1E2D3D]">
+    <div
+      className="flex border-b border-[#1E2D3D] overflow-x-auto w-[100vw] md:w-[calc(100vw-300px)] "
+      style={{
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+      }}
+    >
       {openFiles.map((file) => (
         <div
           key={file.name}
           onClick={() => onTabClick(file.name)}
           className={`flex items-center gap-4 px-4 py-2 border-r cursor-pointer ${
             activeFile === file.name
-              ? "bg-[#011627] text-white"
+              ? "bg-background text-white"
               : "bg-[#011221] text-[#607B96]"
           }`}
         >

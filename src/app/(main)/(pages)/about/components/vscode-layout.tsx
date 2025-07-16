@@ -1,9 +1,16 @@
 "use client";
 import { useState } from "react";
-import Sidebar from "./Sidebar";
-import TabsBar from "./TabsBar";
-import ContentDisplay from "./ContentDisplay";
+import Sidebar from "../../../../../components/layout/sidebar";
+import TabsBar from "../../../../../components/layout/tabs-bar";
+import ContentDisplay from "./content-display";
 import { DataFolder } from "@/data/about-data";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "../../../../../components/ui/sheet";
+import { Button } from "../../../../../components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 export interface File {
   name: string;
@@ -49,17 +56,20 @@ export default function VsCodeLayout({
   )?.content;
 
   return (
-    <div className="flex h-[calc(100vh-100px)] border-t border-[#1E2D3D] overflow-hidden">
+    <div className="flex h-[calc(100vh-100px)] overflow-hidden w-full max-w-full">
       {/* Sol Panel: Fayl Siyahısı */}
-      <Sidebar
-        folders={sidebarFolders}
-        onFileClick={handleOpenFile}
-        activeFile={activeFile}
-      />
 
-      <div className="flex flex-col flex-grow">
+      <div className="hidden md:block h-full">
+        <Sidebar
+          folders={sidebarFolders}
+          onFileClick={handleOpenFile}
+          activeFile={activeFile}
+        />
+      </div>
+
+      <div className="flex flex-col flex-grow min-w-0 w-full">
         {/* Üst Panel: Açıq Faylların Tabları */}
-        <div className="">
+        <div className="w-full max-w-full">
           <TabsBar
             openFiles={openFiles}
             activeFile={activeFile}
@@ -67,6 +77,21 @@ export default function VsCodeLayout({
             onTabClose={handleCloseFile}
           />
         </div>
+        <Sheet modal={false}>
+          <SheetTrigger className="md:hidden p-2 bg-slate-950">
+            <div className="w-full flex justify-between bg-background/10 border rounded-md px-2 py-1">
+              {activeFile}
+              <ChevronDown />
+            </div>
+          </SheetTrigger>
+          <SheetContent className="w-max border-none" side="left">
+            <Sidebar
+              folders={sidebarFolders}
+              onFileClick={handleOpenFile}
+              activeFile={activeFile}
+            />
+          </SheetContent>
+        </Sheet>
         {/* Sağ Panel: Məzmun */}
         <ContentDisplay content={activeFileContent} />
       </div>

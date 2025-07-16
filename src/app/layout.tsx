@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Serif } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 const notoSerif = Noto_Serif({
   variable: "--font-noto-serif",
@@ -22,8 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSerif.variable} antialiased flex flex-col`}>
-        <div className="min-h-screen font-noto-serif flex flex-col">
+      <body className={`${notoSerif.variable} flex`}>
+        <div className="min-h-screen font-noto-serif flex flex-col w-full max-w-full">
           <Header />
           {children}
           <Footer />

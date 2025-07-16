@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { DataFolder, DataFile } from "@/data/about-data";
-import { File } from "./VscodeLayout";
+import { File } from "../../app/(main)/(pages)/about/components/vscode-layout";
 import { ChevronRight, ChevronDown } from "lucide-react";
 
 interface SidebarProps {
@@ -46,7 +46,7 @@ export default function Sidebar({
   };
 
   return (
-    <div className="w-[300px] flex-shrink-0 border-r border-[#1E2D3D] p-2 text-white">
+    <div className="bg-slate-950 w-[300px] flex-shrink-0 border-r p-2 text-white h-full">
       <h2 className="text-xs text-[#607B96] uppercase tracking-widest mb-2">
         File Explorer
       </h2>

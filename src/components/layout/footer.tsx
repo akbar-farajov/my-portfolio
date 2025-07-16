@@ -21,7 +21,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="flex items-center justify-between border-t">
+    <footer className="bg-slate-950 flex items-center justify-between border-t">
       <div className="flex items-center justify-between w-full h-12 text-white/70">
         <div className="flex items-center h-full">
           <div className="border-r h-full flex items-center px-2">

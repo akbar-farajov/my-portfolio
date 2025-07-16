@@ -1,4 +1,4 @@
-import VsCodeLayout from "@/components/layout/VscodeLayout";
+import VsCodeLayout from "@/app/(main)/(pages)/about/components/vscode-layout";
 import aboutDataStructure, { sidebarFiles } from "@/data/about-data";
 
 export default function AboutPage() {

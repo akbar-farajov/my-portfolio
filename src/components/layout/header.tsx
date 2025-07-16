@@ -3,17 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
-import { MobileMenu } from "./MobileMenu";
+import { MobileMenu } from "./mobile-menu";
 import { navLinks } from "@/data";
 
 export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="flex items-center justify-between border-b border-[#1E2D3D]">
+    <header className="bg-slate-950 flex items-center justify-between border-b border-[#1E2D3D]">
       <div className="flex items-center justify-between w-full h-12">
         <div className="flex items-center h-full">
-          <div className="md:border-r h-full flex items-center w-[300px] pl-6">
+          <div className="md:border-r h-full flex items-center md:w-[300px] pl-6">
             <Link href="/" className="text-white text-lg font-medium ">
               akbar-farajov
             </Link>

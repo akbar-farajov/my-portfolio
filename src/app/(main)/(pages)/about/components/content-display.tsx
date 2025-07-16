@@ -9,7 +9,7 @@ interface ContentDisplayProps {
 export default function ContentDisplay({ content }: ContentDisplayProps) {
   if (!content) {
     return (
-      <div className="p-8 bg-[#011627] flex-grow text-[#607B96]">
+      <div className="p-8 bg-background flex-grow text-[#607B96]">
         Select a file to view its content.
       </div>
     );
@@ -20,7 +20,7 @@ export default function ContentDisplay({ content }: ContentDisplayProps) {
   const language = typeof content === "string" ? "markdown" : "json";
 
   return (
-    <div className="p-4 bg-[#011627] flex-1 overflow-auto">
+    <div className="p-4 bg-background flex-1 overflow-auto">
       <SyntaxHighlighter
         language={language}
         style={atomDark}
@@ -29,10 +29,9 @@ export default function ContentDisplay({ content }: ContentDisplayProps) {
           margin: 0,
           padding: "1rem",
         }}
-        wrapLines
         wrapLongLines
-        codeTagProps={{ style: { fontFamily: "var(--font-fira-code)" } }}
         showLineNumbers
+        codeTagProps={{ style: { fontFamily: "var(--font-fira-code)" } }}
       >
         {contentString}
       </SyntaxHighlighter>

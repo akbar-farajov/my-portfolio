@@ -8,8 +8,8 @@ import {
   FolderCode,
   Database,
   BriefcaseBusiness,
+  Folder,
 } from "lucide-react";
-import { RiFolderUserFill } from "@remixicon/react";
 
 // ===== TYPE DEFINITIONS =====
 export interface PersonalInfo {
@@ -103,75 +103,113 @@ export const personalInfoData: PersonalInfo = {
 // Experience Data
 export const experienceData: Experience[] = [
   {
-    id: "privia-security",
-    company: "Privia Security",
-    position: "Senior FrontEnd Developer",
-    period: "March 2024 - Present",
+    id: "fintlabs",
+    company: "FintLabs Academy",
+    position: "Frontend Developer",
+    period: "April 2024 - Present",
     description:
-      "Leading frontend development for cybersecurity platforms and fintech solutions",
+      "Contributing to fintech projects in a real-world remote team setup",
     responsibilities: [
-      "Developed PriviaHub - a comprehensive Cybersecurity Training, Simulation and Exercise (CyberRange) platform for corporate and individual users",
-      "Integrated robot automation and captcha systems into SmartPortal application for finance projects",
-      "Worked as fullstack developer on Doccon project - a document sharing and verification system for finance and HR teams",
-      "Developed clone projects using HTML, CSS and JavaScript for companies seeking support",
+      "Developing scalable user interfaces using Next.js, TypeScript and Tailwind CSS",
+      "Collaborating with backend developers and designers for feature integration",
+      "Contributing to internal CMS and AI SDK integrations",
     ],
-    technologies: ["React", "TypeScript", "Node.js", ".NET Core", "PostgreSQL"],
-    achievements: [
-      "Successfully launched PriviaHub platform serving 1000+ users",
-      "Improved application performance by 40% through optimization",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "React",
+      "VercelAiSDK",
+      "StrapiCMS",
+      "Docker",
+      "GitLab",
+      "Jira",
     ],
   },
   {
-    id: "ersa-yazilim",
-    company: "Ersa Yazılım",
-    position: "FullStack Developer",
-    period: "November 2022 - March 2024",
-    description: "Full-stack development focusing on enterprise applications",
+    id: "fintlabs",
+    company: "FintLabs Academy",
+    position: "Frontend Intern Developer",
+    period: "January 2024 - April 2024",
+    description:
+      "Contributing to fintech projects in a real-world remote team setup",
     responsibilities: [
-      "Developed enterprise web applications using modern frameworks",
-      "Implemented RESTful APIs and database architectures",
-      "Collaborated with cross-functional teams on product development",
-      "Mentored junior developers and conducted code reviews",
+      "Developing scalable user interfaces using Next.js, TypeScript and Tailwind CSS",
+      "Collaborating with backend developers and designers for feature integration",
+      "Contributing to internal CMS and AI SDK integrations",
     ],
-    technologies: ["React", "Vue.js", "C#", ".NET", "SQL Server", "MongoDB"],
-    achievements: [
-      "Delivered 5+ major projects on time and within budget",
-      "Reduced code complexity by implementing design patterns",
-    ],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
   },
 ];
 
 // Projects Data
 export const projectsData: Project[] = [
   {
-    id: "priviahub",
-    name: "PriviaHub",
-    description: "Comprehensive cybersecurity training and simulation platform",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
-    status: "completed",
-    liveUrl: "https://priviahub.com",
-  },
-  {
-    id: "smartportal",
-    name: "SmartPortal",
-    description: "Financial platform with robot integration and automation",
-    technologies: ["React", "C#", ".NET Core", "SQL Server"],
-    status: "completed",
-  },
-  {
-    id: "doccon",
-    name: "Doccon",
-    description: "Document sharing and verification system for enterprises",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    status: "completed",
-  },
-  {
-    id: "portfolio",
-    name: "Personal Portfolio",
-    description: "Modern portfolio website with VS Code theme",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    id: "turbotable",
+    name: "TurboTable AI",
+    description:
+      "A SaaS platform that enables users to generate admin dashboards and AI-powered tables with just a few clicks using prebuilt templates.",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Shadcn UI",
+      "VercelAiSDK",
+      "Docker",
+      "GitLab",
+      "Jira",
+    ],
     status: "in-progress",
-    githubUrl: "https://github.com/username/portfolio",
+    liveUrl: "https://turbotable.ai/",
+  },
+  {
+    id: "azeristudent",
+    name: "Azeri Student",
+    description:
+      "A student portal platform that helps Azerbaijani students access educational content, updates, and community support.",
+    technologies: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Supabase",
+      "VercelAiSDK",
+      "StrapiCMS",
+      "GraphQL",
+      "Docker",
+      "GitLab",
+      "Jira",
+    ],
+    status: "completed",
+    liveUrl: "https://azeristudent.az/",
+  },
+  {
+    id: "digsme",
+    name: "DigsMe",
+    description:
+      "An NGO website for social awareness campaigns and community engagement in Ukraine. Provides detailed resources and event updates.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "ClickUp",
+      "Docker",
+      "GitLab",
+    ],
+    status: "completed",
+    liveUrl: "https://digsme.org.ua/",
+  },
+  {
+    id: "tagme",
+    name: "TagMe",
+    description:
+      "An innovative platform where users can generate unique links and share personalized content. Designed for creators and social engagement.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    status: "in-progress",
+    liveUrl: "http://tagme.vercel.app/",
   },
 ];
 
@@ -184,15 +222,21 @@ export const interestsData: Interest[] = [
       "Artificial Intelligence",
       "Cybersecurity",
       "Open Source",
+      "Mobile Development",
     ],
   },
   {
     category: "Design",
-    items: ["UI/UX Design", "System Architecture", "Design Patterns"],
+    items: [
+      "UI/UX Design",
+      "System Architecture",
+      "Design Patterns",
+      "Animation",
+    ],
   },
   {
     category: "Personal",
-    items: ["MotoSports", "Photography", "Travel", "Reading Tech Blogs"],
+    items: ["Football", "Art", "Travel", "Reading Tech Blogs", "Rap Music"],
   },
 ];
 
@@ -207,24 +251,22 @@ export const frontendSkills: SkillCategory = {
     { name: "Tailwind CSS", level: "Advanced", years: 1 },
     { name: "HTML", level: "Expert", years: 3 },
     { name: "CSS", level: "Advanced", years: 3 },
+    { name: "Shadcn UI", level: "Intermediate", years: 1 },
+    { name: "Zustand", level: "Intermediate", years: 1 },
   ],
 };
 
-export const backendSkills: SkillCategory = {
-  category: "Backend Technologies",
+export const otherSkills: SkillCategory = {
+  category: "Other Technologies",
   skills: [
-    { name: "Node.js", level: "Intermediate", years: 1 },
-    { name: "Supabase", level: "Intermediate", years: 1 },
-    { name: "Express.js", level: "Intermediate", years: 1 },
-  ],
-};
-
-export const databaseSkills: SkillCategory = {
-  category: "Databases & Tools",
-  skills: [
-    { name: "PostgreSQL", level: "Intermediate", years: 1 },
-    { name: "MongoDB", level: "Beginner", years: 1 },
-    { name: "Git", level: "Advanced", years: 2 },
+    { name: "Git", level: "Advanced", years: 3 },
+    { name: "Supabase", level: "Intermediate", years: 2 },
+    { name: "Figma", level: "Intermediate", years: 1 },
+    { name: "GitLab", level: "Intermediate", years: 1 },
+    { name: "Jira", level: "Intermediate", years: 1 },
+    { name: "VercelAiSDK", level: "Intermediate", years: 1 },
+    { name: "StrapiCMS", level: "Intermediate", years: 1 },
+    { name: "GraphQL", level: "Intermediate", years: 1 },
     { name: "Docker", level: "Beginner", years: 1 },
   ],
 };
@@ -258,7 +300,7 @@ export const aboutDataStructure: AboutDataStructure = {
     {
       name: "personal-info",
       type: "folder",
-      icon: <RiFolderUserFill className="w-4 h-4 text-[#43D9AD]" />,
+      icon: <Folder className="w-4 h-4 text-[#43D9AD]" />,
       expanded: true,
       files: [
         {
@@ -305,18 +347,11 @@ export const aboutDataStructure: AboutDataStructure = {
           lastModified: "2024-01-11",
         },
         {
-          name: "backend.json",
+          name: "other.json",
           type: "file",
-          content: backendSkills,
+          content: otherSkills,
           icon: <Code className="w-4 h-4 text-green-500" />,
           lastModified: "2024-01-10",
-        },
-        {
-          name: "databases.json",
-          type: "file",
-          content: databaseSkills,
-          icon: <Database className="w-4 h-4 text-blue-500" />,
-          lastModified: "2024-01-09",
         },
       ],
     },
