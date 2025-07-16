@@ -6,7 +6,6 @@ import {
   Rocket,
   Heart,
   FolderCode,
-  Database,
   BriefcaseBusiness,
   Folder,
 } from "lucide-react";

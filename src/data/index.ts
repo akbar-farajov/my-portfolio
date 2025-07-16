@@ -29,8 +29,6 @@ export {
   projectsData,
   interestsData,
   frontendSkills,
-  backendSkills,
-  databaseSkills,
   educationData,
   aboutDataStructure,
   sidebarFiles,

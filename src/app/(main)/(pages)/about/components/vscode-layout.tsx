@@ -9,7 +9,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from "../../../../../components/ui/sheet";
-import { Button } from "../../../../../components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 export interface File {
