@@ -56,8 +56,6 @@ export default function VsCodeLayout({
 
   return (
     <div className="flex h-[calc(100vh-100px)] overflow-hidden w-full max-w-full">
-      {/* Sol Panel: Fayl Siyahısı */}
-
       <div className="hidden md:block h-full">
         <Sidebar
           folders={sidebarFolders}
@@ -67,7 +65,6 @@ export default function VsCodeLayout({
       </div>
 
       <div className="flex flex-col flex-grow min-w-0 w-full">
-        {/* Üst Panel: Açıq Faylların Tabları */}
         <div className="w-full max-w-full">
           <TabsBar
             openFiles={openFiles}
@@ -91,7 +88,6 @@ export default function VsCodeLayout({
             />
           </SheetContent>
         </Sheet>
-        {/* Sağ Panel: Məzmun */}
         <ContentDisplay content={activeFileContent} />
       </div>
     </div>

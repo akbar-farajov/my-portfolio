@@ -28,8 +28,7 @@ const codeSnippets = [
     if (tired) rest();
   }
 };
-
-// The developer's endless loop
+    
 motivation();`,
   },
   {
@@ -58,7 +57,6 @@ const useTypingEffect = (text: string, speed: number = 60) => {
     setDisplayedText("");
     let i = 0;
 
-    // Start with first character immediately
     if (text.length > 0) {
       setDisplayedText(text.charAt(0));
       i = 0;
@@ -93,14 +91,13 @@ export default function AnimatedCodeBlock() {
         setCurrentSnippetIndex((prev) => (prev + 1) % codeSnippets.length);
         setIsTransitioning(false);
       }, 300);
-    }, 8000); // Change snippet every 8 seconds
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="w-xl max-w-xl h-[350px]  bg-[#011627] rounded-lg border border-[#1E2D3D] shadow-2xl overflow-hidden">
-      {/* Terminal Header */}
       <div className="flex items-center justify-between p-3 bg-[#1E2D3D] rounded-t-lg">
         <div className="flex gap-2">
           <div className="w-3 h-3 bg-[#FE5F57] rounded-full"></div>
@@ -124,7 +121,6 @@ export default function AnimatedCodeBlock() {
         </div>
       </div>
 
-      {/* Code Display Area */}
       <div
         className={`w-full p-4 text-left font-mono text-sm h-full max-h-[290px] overflow-x-auto overflow-y-auto transition-opacity duration-300 ${
           isTransitioning ? "opacity-50" : "opacity-100"
@@ -157,7 +153,6 @@ export default function AnimatedCodeBlock() {
           {animatedCode}
         </SyntaxHighlighter>
 
-        {/* Cursor */}
         <span className="inline-block w-2 h-5 bg-[#28C840] ml-1 animate-pulse" />
       </div>
     </div>
